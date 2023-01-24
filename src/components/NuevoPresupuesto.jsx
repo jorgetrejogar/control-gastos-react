@@ -7,14 +7,7 @@ const NuevoPresupuesto = ({presupuesto, setPresupuesto, setIsValidPresupuesto}) 
     const [mensaje, setMensaje] = useState('');
 
     const handlePresupuesto = (e) => {
-        e.preventDefault();
-        /* if(!presupuesto || presupuesto < 0){
-            setMensaje('No es un presupuesto válido');
-            return;
-        }else if(presupuesto > 100000){
-            alert('El presupuesto máximo por definir es de 100,000');
-            return;
-        } */
+        e.preventDefault();       
         if(presupuesto <= 0 || presupuesto > 50000){
             Swal.fire({
                 text: "El presupuesto debe de ser mayor a 0 y menor a 50,000",
